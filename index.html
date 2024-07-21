@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <section class="main-container">
+        <section class="head-section">
+            <article class="head-sub">
+                <p> Form designer</p>
+                <button type="submit" id="submit-btn" onclick="saveFormData()">Save</button>
+            </article>
+        </section>
+        <section class="body-section">
+            <article class="left-sub">
+                <h3>Components</h3>
+                <ul>
+                    <li class="input-1" id="inpt1">
+                        Input
+                    </li>
+                    <li class="select-1" id="txtarea1">
+                        Select
+                    </li>
+                    <li class="
+                    textarea-1" id="selct1">
+                        Textarea
+                    </li>
+                </ul>
+            </article>
+            <article class="right-sub">
+
+                <article class="right-form-section">
+                    <form class="main-form form-container" id="myForm" action="/submit-form" method="POST" name="myForm"
+                        target="_blank">
+                        <article class="first-label draggable" id="inpt-v" draggable="true">
+                            <label class="label-area" id="del-i">
+                                Sample label
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#5f6368" class="del-icon">
+                                    <path
+                                        d="M304.62-160q-26.85 0-45.74-18.88Q240-197.77 240-224.62V-720h-40v-40h160v-30.77h240V-760h160v40h-40v495.38q0 27.62-18.5 46.12Q683-160 655.38-160H304.62ZM680-720H280v495.38q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92h350.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93V-720ZM392.31-280h40v-360h-40v360Zm135.38 0h40v-360h-40v360ZM280-720v520-520Z" />
+                                </svg>
+                            </label>
+                            <input class="label-input" type="text" placeholder="Sample placeholder" id="i-1">
+                        </article>
+                        <article class="first-label draggable" id="select-v" draggable="true">
+                            <label class="label-area" id="del-s">
+                                Select
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#5f6368" class="del-icon">
+                                    <path
+                                        d="M304.62-160q-26.85 0-45.74-18.88Q240-197.77 240-224.62V-720h-40v-40h160v-30.77h240V-760h160v40h-40v495.38q0 27.62-18.5 46.12Q683-160 655.38-160H304.62ZM680-720H280v495.38q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92h350.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93V-720ZM392.31-280h40v-360h-40v360Zm135.38 0h40v-360h-40v360ZM280-720v520-520Z" />
+                                </svg>
+                            </label>
+                            <select class="label-select" id="selct-option" name="things">
+                                <option></option>
+
+                            </select>
+                            <article class="edit-options">
+                                <button type="button" class="edit-btn addOption">+</button>
+                                <button type="button" class="edit-btn rOption">-</button>
+                            </article>
+
+                        </article>
+                        <article class="first-label draggable" id="textarea-v" draggable="true">
+                            <label class="label-area" id="del-t">
+                                Textarea
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#5f6368" class="del-icon">
+                                    <path
+                                        d="M304.62-160q-26.85 0-45.74-18.88Q240-197.77 240-224.62V-720h-40v-40h160v-30.77h240V-760h160v40h-40v495.38q0 27.62-18.5 46.12Q683-160 655.38-160H304.62ZM680-720H280v495.38q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92h350.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93V-720ZM392.31-280h40v-360h-40v360Zm135.38 0h40v-360h-40v360ZM280-720v520-520Z" />
+                                </svg>
+                            </label>
+                            <textarea class="input-2" id="i-3"></textarea>
+                        </article>
+                        <article class="first-label draggable" id="last-label" draggable="true">
+                            <label class="label-area" id="del-sl">
+                                Sample label
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#5f6368" class="del-icon">
+                                    <path
+                                        d="M304.62-160q-26.85 0-45.74-18.88Q240-197.77 240-224.62V-720h-40v-40h160v-30.77h240V-760h160v40h-40v495.38q0 27.62-18.5 46.12Q683-160 655.38-160H304.62ZM680-720H280v495.38q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92h350.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93V-720ZM392.31-280h40v-360h-40v360Zm135.38 0h40v-360h-40v360ZM280-720v520-520Z" />
+                                </svg>
+                            </label>
+                            <input class="label-input" type="text" placeholder="Sample placeholder" id="i-4">
+                        </article>
+                    </form>
+
+
+                </article>
+
+            </article>
+        </section>
+
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
